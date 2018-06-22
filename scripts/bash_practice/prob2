@@ -1,0 +1,15 @@
+#!/bin/bash
+
+# Read a file line by line and append "Tolling rocks" to each line.
+# The result should be saved as a new file.
+
+file1="../readFile"
+file2="../outputFile"
+ 
+if [ -e "$file1" ]; then
+	echo "$file1 exists"
+fi
+
+while IFS='' read -r line || [[ -n "$line" ]]; do
+	echo $line " Tolling rocks" >> "$file2"
+done <"$file1"

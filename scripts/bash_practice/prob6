@@ -1,0 +1,8 @@
+#!/bin/bash
+
+# Find and zip files (.tgz) that are over 20 days old.
+# Create some files with old dates to test your script.
+
+monitor_dir=/home/brandon/Documents
+
+find ${monitor_dir} -type f -mtime +19 -print | tar -cvzf combined.tgz -T -

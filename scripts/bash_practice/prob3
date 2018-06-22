@@ -1,0 +1,7 @@
+#!/bin/bash
+
+# Parse a file, looking for every instance of "John Cena" in succession.
+
+file1="../readFile"
+
+grep 'John Cena' $file1

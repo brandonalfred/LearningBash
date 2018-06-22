@@ -1,0 +1,20 @@
+#!/bin/bash
+
+# Check a directory every 30 seconds. 
+# If there is a new file, move it to a different directory.
+
+file_list=/home/brandon/Documents/fileList
+monitor_dir=/home/brandon/Documents
+
+[[ -f ${file_list} ]] || ls ${monitor_dir} > ${file_list}
+
+while : ; do
+ cur_files=$(ls ${monitor_dir})
+ diff <(cat ${file_list}) <(echo $cur_files) || \
+ 	{ echo "Alert: ${monitor_dir} changed" ;
+ 		echo $cur_files > ${file_list} ;
+ 	}
+
+ echo "Waiting for changes...."
+ sleep 30
+done

@@ -1,0 +1,8 @@
+#!/bin/bash
+
+# Take two files arguments and print lines if they are in both files. Do it without using comm.
+
+file1="../fileArg1"
+file2="../fileArg2"
+
+fgrep -x -f $file1 $file2

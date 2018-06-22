@@ -1,0 +1,9 @@
+#!/bin/bash
+
+# Manage a configuration file. The file will have parameters about a vehicle.
+
+source ./prob9_config
+
+echo "The make of the car is $make"
+echo "The car has $axels axels"
+echo "The color of the car is $color"

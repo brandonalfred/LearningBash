@@ -1,0 +1,33 @@
+#!/bin/bash
+
+#rewrite the program you wrote for your interview in bash
+
+input="01020304"
+key="abcdefghijklmnopqrstuvwxyz"
+
+# number to word
+if [[ $input =~ ^[0-9]+$ ]]; then
+	for (( i=0; i<${#input}; i+=2 )); do
+		place_holder="${input:$i:2}"
+
+		for (( j=0; j<${#key}; j++ )); do
+			if [[ $place_holder-1 -eq $j ]]; then
+				printf "${key:$j:1}"
+			fi
+		done
+	done
+
+	echo
+fi
+
+# word to number
+if ! [[ $input =~ ^[0-9]+$ ]]; then
+	spot=""
+	while [[ $input ]]; do
+		printf '%s%02d' "$spot" "$((36#${input::1}-9))"
+		input=${input:1}
+	done
+
+	echo
+fi
+

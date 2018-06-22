@@ -1,0 +1,21 @@
+#!/bin/bash
+
+# Take a hostbuffer section and print the number of transactions for each lane.
+
+inputFile="../hostbuffertemp"
+
+i=0
+
+num_3s=0
+num_4s=0
+num_5s=0
+
+echo "transactions for each lane are:"
+
+num_3s=$(cat $inputFile | cut -d'|' -f 6 | grep 3 | wc -l)
+num_4s=$(cat $inputFile | cut -d'|' -f 6 | grep 4 | wc -l)
+num_5s=$(cat $inputFile | cut -d'|' -f 6 | grep 5 | wc -l)
+
+echo "Lane 3: ${num_3s}"
+echo "Lane 4: ${num_4s}"
+echo "Lane 5: ${num_5s}"

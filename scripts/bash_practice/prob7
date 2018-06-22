@@ -1,0 +1,22 @@
+#!/bin/bash
+
+# Take a portion of a Zone Controller buffer and find the average speed of all transactions.
+
+inputFile="../hostbuffertemp"
+
+i=0
+
+while IFS='' read -r line || [[ -n "$line" ]]; do
+	field[$i]=$(echo $line | cut -d'|' -f 18)
+	((i++))
+done < "$inputFile"
+
+sum=0
+counter=0
+
+for j in "${field[@]}"; do
+	sum=$((sum + j))
+	counter=$((counter + 1))
+done
+
+echo "The average is $((sum / counter))"

@@ -1,0 +1,20 @@
+#!/bin/bash
+
+# Create a fake service that can be started and will run until it is stopped.
+
+case "$1" in
+	start)
+		echo -n "Starting Deamon...."
+		echo "running"
+
+		while true; do
+			echo "hello world"
+			sleep 1
+		done
+
+		;;
+	*)
+		echo "Usage: $0 start"
+		exit 1
+		;;
+esac
