@@ -1,22 +1,22 @@
-Print all numbers from 1 to 1000, skipping every third number.
+1. Print all numbers from 1 to 1000, skipping every third number.
 
-Read a file line by line and append "Tolling rocks" to each line. The result should be saved as a new file.
+2. Read a file line by line and append "Tolling rocks" to each line. The result should be saved as a new file.
 
-Parse a file, looking for every instance of "John Cena" in succession.
+3. Parse a file, looking for every instance of "John Cena" in succession.
 
-Check a directory every 30 seconds. If there is a new file, move it to a different directory.
+4. Check a directory every 30 seconds. If there is a new file, move it to a different directory.
 
-Create a fake service that can be started and will run until it is stopped.
+5. Create a fake service that can be started and will run until it is stopped.
 
-Find and zip files (into .tgz format) that are over 20 days. Create some files with old dates to test your script.
+6. Find and zip files (into .tgz format) that are over 20 days. Create some files with old dates to test your script.
 
-Take a portion of a Zone Controller (ZC) buffer and find the average speed of all the transactions.
+7. Take a portion of a Zone Controller (ZC) buffer and find the average speed of all the transactions.
 
-Rewrite the program you wrote for your interview in Bash.
+8. Rewrite the program you wrote for your interview in Bash.
 
-Manage a configuration file. The file will have parameters about a vehicle (i.e. size=x, length=y). 
+9. Manage a configuration file. The file will have parameters about a vehicle (i.e. size=x, length=y). 
 The script will prompt the user to see current configurations or to view, add, update, or remove vehicles.
 
-Take a hostbuffer section and print the number of transactions for each lane.
+10. Take a hostbuffer section and print the number of transactions for each lane.
 
-Take two files arguments and print lines if they are in both files. Do it without using comm.
+11. Take two files arguments and print lines if they are in both files. Do it without using comm.
