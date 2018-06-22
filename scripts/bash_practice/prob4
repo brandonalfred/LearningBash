@@ -3,8 +3,8 @@
 # Check a directory every 30 seconds. 
 # If there is a new file, move it to a different directory.
 
-file_list=/home/brandon/Documents/fileList
-monitor_dir=/home/brandon/Documents
+file_list=../fileList
+monitor_dir=../scripts
 
 [[ -f ${file_list} ]] || ls ${monitor_dir} > ${file_list}
 
