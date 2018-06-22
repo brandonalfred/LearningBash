@@ -3,6 +3,6 @@
 # Find and zip files (.tgz) that are over 20 days old.
 # Create some files with old dates to test your script.
 
-monitor_dir=/home/brandon/Documents
+monitor_dir=../scripts
 
 find ${monitor_dir} -type f -mtime +19 -print | tar -cvzf combined.tgz -T -
